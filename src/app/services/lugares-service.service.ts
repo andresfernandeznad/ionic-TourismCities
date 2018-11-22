@@ -45,6 +45,7 @@ export class LugaresServiceService implements Lugar {
 
   deletelugar(id: number) {
     this.lugares = this.lugares.filter(l => l.id !== id);
+    console.log(this.lugares;)
     return this.storage.set('lugares', this.lugares);
   }
 
@@ -53,20 +54,11 @@ export class LugaresServiceService implements Lugar {
   }
 
   newLugar(lugar: Lugar): Promise<any> {
+    lugar.id = this.lugarCounter;
     this.lugares.push(lugar);
     this.lugarCounter++;
-    /*if(this.existeImagen(lugar.photoUrl)) {
-      console.log("Existe la imagen");
-    }*/
     return this.storage.set('lugares', this.lugares).then(
       () => this.storage.set('lugarCounter', this.lugarCounter)
     );
   }
-
-  /*existeImagen(url) {
-    var http = new XMLHttpRequest();
-    http.open('GET', url, false);
-    http.send();
-    return http.status!=404;
-  }*/
 }

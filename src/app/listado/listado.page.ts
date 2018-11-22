@@ -25,22 +25,18 @@ export class ListadoPage implements OnInit {
     console.log(this.lugares);
   }
 
-  mostrarInfo(id: number) {
-    console.log(this.lugares[id].photoUrl);
-  }
-
   async mostrarVentana(id: number) {
-    if(!this.lugares[id].visible) {
+    console.log(this.lugares);
+    if(!this.lugaresService.getlugarById(id).visible) {
       const alert = await this.alertController.create({
-        header: this.lugares[id].nombre,
-        message: '¿Quieres ver más información o borrar el lugar ' + this.lugares[id].nombre + '?',
+        header: this.lugaresService.getlugarById(id).nombre,
+        message: '¿Quieres ver más información o borrar el lugar ' + this.lugaresService.getlugarById(id).nombre + '?',
         buttons: [
           {
             text: 'Ver información',
-            role: 'cancel',
             cssClass: 'secondary',
             handler: (blah) => {
-              this.lugares[id].visible = !this.lugares[id].visible ;
+              this.lugaresService.getlugarById(id).visible = !this.lugaresService.getlugarById(id).visible ;
             }
           }, {
             text: 'Borrar',
@@ -57,15 +53,14 @@ export class ListadoPage implements OnInit {
       await alert.present();
     } else {
       const alert = await this.alertController.create({
-        header: this.lugares[id].nombre,
-        message: '¿Quieres ocultar información o borrar el lugar ' + this.lugares[id].nombre + '?',
+        header: this.lugaresService.getlugarById(id).nombre,
+        message: '¿Quieres ocultar información o borrar el lugar ' + this.lugaresService.getlugarById(id).nombre + '?',
         buttons: [
           {
             text: 'Ocultar información',
-            role: 'cancel',
             cssClass: 'secondary',
             handler: (blah) => {
-              this.lugares[id].visible = !this.lugares[id].visible ;
+              this.lugaresService.getlugarById(id).visible = !this.lugaresService.getlugarById(id).visible ;
             }
           }, {
             text: 'Borrar',

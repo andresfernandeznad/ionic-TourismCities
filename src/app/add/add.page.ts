@@ -17,9 +17,13 @@ export class AddPage implements OnInit {
    }
 
   ngOnInit() {
+    console.log(screen.width);
   }
 
   saveLugar(lugar: Lugar) {
+    if(!lugar.photoUrl.includes(".jpg") && !lugar.photoUrl.includes(".png")) {
+      lugar.photoUrl = "./assets/malaga.png";
+    }
     this.lugar.id = this.lugaresService.lugarCounter;
     this.lugaresService.newLugar(this.lugar).then(
       () => this.nav.goBack(true),
