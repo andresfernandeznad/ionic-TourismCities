@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Slides } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  
+  slidesDidLoad(slides: Slides) {
+    slides.startAutoplay();
+  }
 }

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Tourism Cities
+    </ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button shape="round" href="/listado">
+        </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input clearInput [(ngModel)]="lugar.nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Descripción</ion-label>
+    <ion-input clearInput [(ngModel)]="lugar.descripcion"></ion-input>
+  </ion-item>
+</ion-content>

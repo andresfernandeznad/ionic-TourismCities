@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Tourism Cities
+    </ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button shape="round" href="/home">
+        </ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button shape="round" href="/add" routerDirection="forward">
+        <ion-icon name="add">Añadir lugar</ion-icon>
+      </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+    <ion-list lines="full">
+        <ion-item *ngFor="let l of lugares">
+          <ion-card>
+              <ion-img width="90%" height="400px" src="{{l.photoUrl}}"></ion-img>
+              <ion-card-header>
+                  <ion-card-title color="white">{{l.nombre}}</ion-card-title>
+              </ion-card-header>
+          </ion-card>
+        </ion-item>
+      </ion-list>
+</ion-content>

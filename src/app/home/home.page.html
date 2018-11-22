@@ -1,12 +1,22 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
     <ion-title>
-      Ionic Blank
+      Tourism Cities
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
-</ion-content>
+<ion-content color="primary">
+  <ion-slides speed="3000" #mySlider pager="true" (ionSlidesDidLoad)="slidesDidLoad(mySlider)">
+    <ion-slide>
+      <img src="./assets/malaga.png">
+    </ion-slide>
+    <ion-slide>
+      <img src="./assets/citywallpaperhd.com-76.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src="./assets/DE8.jpg">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-button color="medium" expand="block" router-direction="forward" href="/listado">Acceder</ion-button>
