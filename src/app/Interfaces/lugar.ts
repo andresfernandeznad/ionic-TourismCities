@@ -5,4 +5,5 @@ export interface Lugar {
     nombre: string;
     photoUrl: string;
     descripcion: string;
+    visible: boolean;
 }

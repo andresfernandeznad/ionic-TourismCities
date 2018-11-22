@@ -13,7 +13,7 @@ export class AddPage implements OnInit {
   lugar: Lugar;
 
   constructor(private lugaresService: LugaresServiceService, private nav: NavController) {
-    this.lugar = {id: this.lugaresService.lugarCounter, lat: 0.0, long: 0.0, nombre: '', photoUrl: '', descripcion: ''};
+    this.lugar = {id: this.lugaresService.lugarCounter, lat: 0.0, long: 0.0, nombre: '', photoUrl: '', descripcion: '', visible: false};
    }
 
   ngOnInit() {
@@ -21,7 +21,6 @@ export class AddPage implements OnInit {
 
   saveLugar(lugar: Lugar) {
     this.lugar.id = this.lugaresService.lugarCounter;
-
     this.lugaresService.newLugar(this.lugar).then(
       () => this.nav.goBack(true),
       (error) => console.log('Error al guardarlo', error)

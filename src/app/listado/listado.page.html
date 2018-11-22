@@ -19,11 +19,14 @@
 <ion-content color="primary">
     <ion-list lines="full">
         <ion-item *ngFor="let l of lugares">
-          <ion-card>
+          <ion-card (click)="mostrarVentana(l.id)">
               <ion-img width="90%" height="400px" src="{{l.photoUrl}}"></ion-img>
               <ion-card-header>
                   <ion-card-title color="white">{{l.nombre}}</ion-card-title>
               </ion-card-header>
+              <ion-card-content *ngIf="l.visible">
+                {{l.descripcion}}
+              </ion-card-content>
           </ion-card>
         </ion-item>
       </ion-list>

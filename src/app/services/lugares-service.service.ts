@@ -13,6 +13,7 @@ export class LugaresServiceService implements Lugar {
   nombre: string;
   photoUrl: string;
   descripcion: string;
+  visible: boolean = false;
 
   lugarCounter: number = 0;
 
@@ -54,9 +55,18 @@ export class LugaresServiceService implements Lugar {
   newLugar(lugar: Lugar): Promise<any> {
     this.lugares.push(lugar);
     this.lugarCounter++;
-
+    /*if(this.existeImagen(lugar.photoUrl)) {
+      console.log("Existe la imagen");
+    }*/
     return this.storage.set('lugares', this.lugares).then(
       () => this.storage.set('lugarCounter', this.lugarCounter)
     );
   }
+
+  /*existeImagen(url) {
+    var http = new XMLHttpRequest();
+    http.open('GET', url, false);
+    http.send();
+    return http.status!=404;
+  }*/
 }
