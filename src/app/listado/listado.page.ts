@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Lugar } from '../Interfaces/lugar';
 import { LugaresServiceService } from '../services/lugares-service.service';
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-listado',
@@ -12,7 +12,7 @@ export class ListadoPage implements OnInit {
 
   lugares: Lugar[] = [];
 
-  constructor(private lugaresService: LugaresServiceService, private alertController: AlertController) { }
+  constructor(private lugaresService: LugaresServiceService, private alertController: AlertController, private navController: NavController) { }
 
   ngOnInit() {
     
@@ -39,6 +39,12 @@ export class ListadoPage implements OnInit {
               this.lugaresService.getlugarById(id).visible = !this.lugaresService.getlugarById(id).visible ;
             }
           }, {
+            text: 'Editar',
+            cssClass: 'secondary',
+            handler: (blah) => {
+              this.navController.navigateForward('/add/' + id);
+            }
+          }, {
             text: 'Borrar',
             handler: () => {
               this.lugaresService.deletelugar(id).then(() => this.lugaresService.getLugares().then(
@@ -61,6 +67,12 @@ export class ListadoPage implements OnInit {
             cssClass: 'secondary',
             handler: (blah) => {
               this.lugaresService.getlugarById(id).visible = !this.lugaresService.getlugarById(id).visible ;
+            }
+          },{
+            text: 'Editar',
+            cssClass: 'secondary',
+            handler: (blah) => {
+              this.navController.navigateForward('/add/' + id);
             }
           }, {
             text: 'Borrar',
