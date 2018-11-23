@@ -33,3 +33,9 @@ If you click <strong>Ver información</strong> you will see more information abo
 If you want to hide the information you have to click again and select <strong>Ocultar información</strong>
 
 <img src="https://github.com/andresfernandeznad/ionic-TourismCities/blob/master/imgs/ocultarInfo.PNG" width="300px">
+
+If you select the <strong>Editar</strong> option you will can edit your place if you want to change some data.
+
+<img src="https://github.com/andresfernandeznad/ionic-TourismCities/blob/master/imgs/pantallaEdit.PNG" width="300px">
+
+And if you select the <strong>Borrar</strong> option the app will delete your place from the local storage.
