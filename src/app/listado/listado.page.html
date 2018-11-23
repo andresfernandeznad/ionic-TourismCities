@@ -24,6 +24,10 @@
               <ion-card-header>
                   <ion-card-title color="white">{{l.nombre}}</ion-card-title>
               </ion-card-header>
+              <ion-item *ngIf="l.visible">
+                  <ion-icon name="pin" slot="start"></ion-icon>
+                  <div>{{l.lat}} , {{l.long}}</div>
+              </ion-item>
               <ion-card-content *ngIf="l.visible">
                 {{l.descripcion}}
               </ion-card-content>

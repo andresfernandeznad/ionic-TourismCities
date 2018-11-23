@@ -1,0 +1,6 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "tourism-cities",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}

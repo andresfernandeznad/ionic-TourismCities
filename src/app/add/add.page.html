@@ -20,6 +20,14 @@
     <ion-input clearInput [(ngModel)]="lugar.descripcion"></ion-input>
   </ion-item>
   <ion-item>
+      <ion-label position="floating">Latitud</ion-label>
+      <ion-input clearInput [(ngModel)]="lugar.lat"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label position="floating">Longitud</ion-label>
+      <ion-input clearInput [(ngModel)]="lugar.long"></ion-input>
+  </ion-item>
+  <ion-item>
     <ion-label position="floating">URL</ion-label>
     <ion-input clearInput [(ngModel)]="lugar.photoUrl"></ion-input>
   </ion-item>
@@ -27,6 +35,5 @@
   <ion-button (click)="saveLugar(lugar)" id="boton" color="medium" expand="full">
     <ion-icon name="save"></ion-icon>
     Guardar
-
   </ion-button>
 </ion-content>

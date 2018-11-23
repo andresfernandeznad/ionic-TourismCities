@@ -1,5 +1,7 @@
 {
   "name": "tourism-cities",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,7 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "tourism-cities",
+  "bundledWebRuntime": false,
+  "webDir": "www",
+  "windowsAndroidStudioPath": "C:\\Program Files\\Android\\Android Studio\\bin\\studio64.exe"
+}

@@ -21,7 +21,6 @@ export class AddPage implements OnInit {
 
   ngOnInit() {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
-
     if (id) {
       this.edit = true;
       this.lugar = this.lugaresService.getlugarById(parseInt(id));

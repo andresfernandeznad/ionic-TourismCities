@@ -20,7 +20,7 @@ export class ListadoPage implements OnInit {
 
   ionViewWillEnter() {
     this.lugaresService.getLugares().then(
-      data => this.lugares = data //El getTodo devuelve una promesa cuando se cumple la promesa entra al método, mete los datos en el data y una vez esté lo asignamos.
+      data => this.lugares = data 
     ); //Accedo al servicio (donde se guardan los datos) y esto me devuelve un array de todos que se guarda aquí en esta clase
     console.log(this.lugares);
   }

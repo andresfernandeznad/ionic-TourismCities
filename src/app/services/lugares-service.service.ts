@@ -54,7 +54,6 @@ export class LugaresServiceService implements Lugar {
   }
 
   newLugar(lugar: Lugar): Promise<any> {
-    lugar.id = this.lugarCounter;
     this.lugares.push(lugar);
     this.lugarCounter++;
     return this.storage.set('lugares', this.lugares).then(
