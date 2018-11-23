@@ -23,7 +23,7 @@ export class AddPage implements OnInit {
   saveLugar(lugar: Lugar) {
     if(!lugar.photoUrl.includes(".jpg") && !lugar.photoUrl.includes(".png")) {
       lugar.photoUrl = "./assets/malaga.png";
-      this.presentToast();
+      this.presentToastFormNoValid();
     }
     this.lugar.id = this.lugaresService.lugarCounter;
     this.lugaresService.newLugar(this.lugar).then(
@@ -32,7 +32,7 @@ export class AddPage implements OnInit {
     );
   }
 
-  async presentToast() {
+  async presentToastFormNoValid() {
     const toast = await this.toastController.create({
       message: 'Imagen por defecto añadida, no es un formato soportado.',
       duration: 2000
