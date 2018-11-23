@@ -7,4 +7,4 @@ This is an app to manage and storage your favourite cities or places to do some 
 
 If you click on Acceder you will go to the page where you can see the list with your cities or places
 
-<img src="https://github.com/andresfernandeznad/ionic-TourismCities/blob/master/imgs/postacceso.PNG" width="200px">
+<img src="https://github.com/andresfernandeznad/ionic-TourismCities/blob/master/imgs/postAcceso.PNG" width="200px">
