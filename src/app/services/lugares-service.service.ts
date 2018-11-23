@@ -45,7 +45,7 @@ export class LugaresServiceService implements Lugar {
 
   deletelugar(id: number) {
     this.lugares = this.lugares.filter(l => l.id !== id);
-    console.log(this.lugares;)
+    console.log(this.lugares);
     return this.storage.set('lugares', this.lugares);
   }
 
