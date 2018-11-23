@@ -26,4 +26,10 @@ Now if you click on your place you have three options
 
 <img src="https://github.com/andresfernandeznad/ionic-TourismCities/blob/master/imgs/ventanaModal.PNG" width="300px">
 
-If you click t
+If you click <strong>Ver información</strong> you will see more information about the place.
+
+<img src="https://github.com/andresfernandeznad/ionic-TourismCities/blob/master/imgs/masInfo.PNG" width="300px">
+
+If you want to hide the information you have to click again and select <strong>Ocultar información</strong>
+
+<img src="https://github.com/andresfernandeznad/ionic-TourismCities/blob/master/imgs/ocultarInfo.PNG" width="300px">
