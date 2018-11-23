@@ -17,3 +17,13 @@ Here you can do few things, for example, if you have this empty and you want to 
 ### Add page
 
 <img src="https://github.com/andresfernandeznad/ionic-TourismCities/blob/master/imgs/anyadirLugarNuevo.PNG" width="300px">
+
+If you for example on the url input you introduce an image without the extension .jpg or .png the app will change your url to a default photo storaged in the app.
+
+<img src="https://github.com/andresfernandeznad/ionic-TourismCities/blob/master/imgs/alert.PNG" width="300px">
+
+Now if you click on your place you have three options
+
+<img src="https://github.com/andresfernandeznad/ionic-TourismCities/blob/master/imgs/ventanaModal.PNG" width="300px">
+
+If you click t
