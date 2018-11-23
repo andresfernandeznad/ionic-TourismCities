@@ -1,1 +1,4 @@
-# ionic-TourismCities
+# TourismCities
+This is an app to manage and storage your favourite cities or places to do some tourism or whatever.
+
+At first, we have the access page, where we can access to our app. (Actually without authentication)
